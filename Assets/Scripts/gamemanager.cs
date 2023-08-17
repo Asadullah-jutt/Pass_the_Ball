@@ -164,42 +164,42 @@ public class gamemanager : MonoBehaviour
             }
         }
         // Mouse input
-        if (Input.GetMouseButtonDown(0))
-        {
-            line.enabled = true;
-            //  line2.enabled = true;
-            nstartpos = Cam.ScreenToWorldPoint(Input.mousePosition);
-            nstartpos.z = 0f;
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    line.enabled = true;
+        //    //  line2.enabled = true;
+        //    nstartpos = Cam.ScreenToWorldPoint(Input.mousePosition);
+        //    nstartpos.z = 0f;
+        //}
 
-        if (Input.GetMouseButton(0))
-        {
-            nendpos = Cam.ScreenToWorldPoint(Input.mousePosition);
-            nendpos.z = 0f;
-            startpos.z = 0f;
-            force = new Vector2(Mathf.Clamp((startpos.x - nendpos.x), minpower.x, maxpower.x), Mathf.Clamp((startpos.y - nendpos.y), minpower.y, maxpower.y));
-            Vector2 endPos = (Vector2)startpos + force;
-            RenderLine(startpos, endPos);
-            //   Debug.Log("in");
-        }
+        //if (Input.GetMouseButton(0))
+        //{
+        //    nendpos = Cam.ScreenToWorldPoint(Input.mousePosition);
+        //    nendpos.z = 0f;
+        //    startpos.z = 0f;
+        //    force = new Vector2(Mathf.Clamp((startpos.x - nendpos.x), minpower.x, maxpower.x), Mathf.Clamp((startpos.y - nendpos.y), minpower.y, maxpower.y));
+        //    Vector2 endPos = (Vector2)startpos + force;
+        //    RenderLine(startpos, endPos);
+        //    //   Debug.Log("in");
+        //}
 
-        if (Input.GetMouseButtonUp(0))
-        {
+        //if (Input.GetMouseButtonUp(0))
+        //{
 
-            nendpos = Cam.ScreenToWorldPoint(Input.mousePosition);
-            nendpos.z = 0f;
-            startpos.z = 0f;
-            // rb.useGravity = true;
-            Debug.Log(touchcount);
-            touchcount--;
-            //if (touchcount >= 0)
-            //    return;
-            force = new Vector2(Mathf.Clamp((startpos.x - nendpos.x), minpower.x, maxpower.x), Mathf.Clamp((startpos.y - nendpos.y), minpower.y, maxpower.y));
-            rb.AddForce(force * forceMultiplier, ForceMode.Impulse);
-            ingame = true;
-            line.enabled = false;
-            // DrawForceDirection(transform.position, force);
-        }
+        //    nendpos = Cam.ScreenToWorldPoint(Input.mousePosition);
+        //    nendpos.z = 0f;
+        //    startpos.z = 0f;
+        //    // rb.useGravity = true;
+        //    Debug.Log(touchcount);
+        //    touchcount--;
+        //    //if (touchcount >= 0)
+        //    //    return;
+        //    force = new Vector2(Mathf.Clamp((startpos.x - nendpos.x), minpower.x, maxpower.x), Mathf.Clamp((startpos.y - nendpos.y), minpower.y, maxpower.y));
+        //    rb.AddForce(force * forceMultiplier, ForceMode.Impulse);
+        //    ingame = true;
+        //    line.enabled = false;
+        //    // DrawForceDirection(transform.position, force);
+        //}
 
 
 
